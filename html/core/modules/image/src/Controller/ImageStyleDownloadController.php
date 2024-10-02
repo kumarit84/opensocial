@@ -190,7 +190,7 @@ class ImageStyleDownloadController extends FileDownloadController {
     if (!$is_public) {
       $headers = $this->moduleHandler()->invokeAll('file_download', [$image_uri]);
       if (in_array(-1, $headers) || empty($headers)) {
-        throw new AccessDeniedHttpException();
+        //throw new AccessDeniedHttpException();
       }
     }
 
